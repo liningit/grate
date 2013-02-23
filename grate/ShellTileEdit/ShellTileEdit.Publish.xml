@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\Users\Administrator\Desktop\WebSite" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="配置文件1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/BLL.pdb" publishTime="08/19/2012 10:21:27" />
+    <file relUrl="bin/Tool.dll" publishTime="08/19/2012 10:21:26" />
+    <file relUrl="WebServices/ShellTileEditWS.asmx" publishTime="06/24/2012 14:31:19" />
+    <file relUrl="bin/ShellTileEdit.pdb" publishTime="08/19/2012 10:21:27" />
+    <file relUrl="bin/DAL.dll" publishTime="08/19/2012 10:21:27" />
+    <file relUrl="Web.config" publishTime="08/19/2012 10:25:20" />
+    <file relUrl="bin/Model.dll" publishTime="08/19/2012 10:21:27" />
+    <file relUrl="bin/ShellTileEdit.dll" publishTime="08/19/2012 10:21:27" />
+    <file relUrl="bin/Model.pdb" publishTime="08/19/2012 10:21:27" />
+    <file relUrl="bin/DAL.pdb" publishTime="08/19/2012 10:21:27" />
+    <file relUrl="bin/Tool.pdb" publishTime="08/19/2012 10:21:26" />
+    <file relUrl="bin/BLL.dll" publishTime="08/19/2012 10:21:27" />
+  </publishProfile>
+</publishData>
