@@ -82,7 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="ShellTileImg\" />
+    <Folder Include="ShellTileImg\small\Q\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
@@ -100,6 +100,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ShellTileImgGet.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ShellTileImg\Q\Web.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
