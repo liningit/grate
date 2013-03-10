@@ -6,6 +6,7 @@ using System.Web.Services;
 using LN.Model;
 using System.IO;
 using LN.BLL;
+using Com.Tool;
 
 namespace ShellTileEdit.WebServices
 {
@@ -148,8 +149,17 @@ namespace ShellTileEdit.WebServices
                 return "没有权限";
             }
             ShellTileListBLL bll = new ShellTileListBLL();
-            CImg=","+CImg+",";
-            List<ShellTileList> lst= bll.GetList(null).FindAll(m => CImg.Contains("," + m.CImg + ","));
+         
+            List<ShellTileList> lst=null;
+            if (CImg.Contains("Get.ashx?id="))
+            {
+                lst = bll.GetList(null).FindAll(m =>  CImg.Contains("Get.ashx?id=" + m.Id+"&"));
+            }
+            else
+            {
+                CImg = "," + CImg + ",";
+                lst = bll.GetList(null).FindAll(m => CImg.Contains("," + m.CImg + ","));
+            }
             if (lst.Count==0)
             {
                 return "该图片不存在";
@@ -257,7 +267,7 @@ namespace ShellTileEdit.WebServices
                 }
                 else
                 {
-                    lst = lst.Skip(lst.FindIndex(m => m.CImg == beginImg) + 1).Take(OneCount).ToList();
+                    lst = lst.Skip(lst.FindIndex(m => beginImg.Contains("Get.ashx?id=" + m.Id+"&")) + 1).Take(OneCount).ToList();
                 }
                 if (lst.Count > 0)
                 {
@@ -268,7 +278,13 @@ namespace ShellTileEdit.WebServices
                     isEnd = true;
                 }
             }
+            foreach (ShellTileList shell in lst)
+            {
+                shell.CImg = "Get.ashx?id=" + shell.Id + "&guid=" + AppObj.GetGuid()+"&name="+shell.CImg;
+            }
             return lst;
         }
+
+     
     }
 }

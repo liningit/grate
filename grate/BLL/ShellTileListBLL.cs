@@ -21,6 +21,11 @@ namespace LN.BLL
 		return new ShellTileListDAL();
 		}
 		#endregion  成员方法
+
+        public ShellTileList GetModelByID(int id)
+        {
+            return GetModel(new ShellTileList() { Id = id });
+        }
 	}
 }
 

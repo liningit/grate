@@ -20,6 +20,10 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -66,7 +70,11 @@
     <Content Include="WebServices\ShellTileEditWS.asmx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppObj.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShellTileImgGet.ashx.cs">
+      <DependentUpon>ShellTileImgGet.ashx</DependentUpon>
+    </Compile>
     <Compile Include="WebServices\ShellTileEditWS.asmx.cs">
       <DependentUpon>ShellTileEditWS.asmx</DependentUpon>
       <SubType>Component</SubType>
@@ -85,6 +93,13 @@
       <Project>{D278964D-C02C-4123-B26D-BEB911149F45}</Project>
       <Name>Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Tool\Tool.csproj">
+      <Project>{e14e6c05-63e8-4a3c-82c3-acbfdfec88c6}</Project>
+      <Name>Tool</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ShellTileImgGet.ashx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
